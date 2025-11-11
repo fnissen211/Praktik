@@ -1,31 +1,35 @@
 public class BankAccount {
+    // Variabler
     private String name;
-    private int amount;
+    private int saldo;
 
-    public BankAccount(String name, int amount) {
+    // Konstruktør
+    public BankAccount(String name, int saldo) {
         this.name = name;
 
-        this.amount = amount;
+        this.saldo = saldo;
     }
 
-    public String getName() {
+    // Dette er properties (både hentNavn og hentSaldo)
+    public String hentNavn() {
         return name;
     }
 
-    public int getAmount() {
-        return amount;
+    public int hentSaldo() {
+        return saldo;
     }
 
-    public int withdrawFromAccount(int withdrawAmount) {
-        // INSERT CODE HERE
+    // Dette er en metode
+    public int hæveFraKonto(int hæveBeløb) {
+        // INDSÆT KODE HER
         // Der skal trækkes penge fra din konto, så selve
-        // withdrawAmount skal minusses med selve amount på din konto
+        // 'hæveBeløb' skal minusses med selve saldoen på din konto
 
-
-        return amount; // Denne linje skal slettes og der skal oprettes en ny return
+        
+        return saldo;
     }
 
-    // Lav en ny metode nedenunder der hedder depositToAccount, så der også kan
+    // Lav en ny metode nedenunder der hedder indsætPåKonto, så der også kan
     // indsættes penge på din konto. Udkommenter linjerne i Main.java-filen
     // når du er færdig med din metode.
 

@@ -1,14 +1,20 @@
-Opgave 1: Implementer metoden `withdrawFromAccount`
-- I metoden `withdrawFromAccount` i filen BankAccount.java, skal du trække det beløb, 
-  som brugeren ønsker at hæve (`withdrawAmount`), fra kontoen (`amount`).
-- Sørg for, at metoden opdaterer kontoen korrekt og returnerer det nye beløb.
-- Fjern den eksisterende return-linje og erstat den med en korrekt implementering.
+OPGAVER:
 
-Opgave 2: Opret metoden `depositToAccount`
-- Lav en ny metode i klassen `BankAccount`, der hedder `depositToAccount`.
-- Metoden skal tage et beløb som parameter og lægge det til kontoen (`amount`).
-- Sørg for, at kontoen opdateres korrekt.
+1. Implementér metoden `hæveFraKonto` i klassen `BankAccount`:
+    - Metoden skal tage et beløb som parameter (`hæveBeløb`) og trække dette beløb fra kontosaldoen (`saldo`).
 
-Opgave 3: Test din kode
-- Fjern kommentarerne i `Main.java` for at teste din nye metode `depositToAccount`.
-- Sørg for, at både hævning og indsættelse af penge fungerer korrekt, ved at køre programmet.
+2. Opret en ny metode i klassen `BankAccount` kaldet `indsætPåKonto`:
+    - Metoden skal tage et beløb som parameter og lægge dette beløb til kontosaldoen (`saldo`).
+    - Sørg for, at beløbet, der indsættes, er positivt. Hvis det ikke er det, skal 
+      der udskrives en besked til brugeren, og saldoen skal forblive uændret.
+
+3. Når du har implementeret metoden `indsætPåKonto`, skal du udkommentere de relevante linjer i `Main.java` 
+   (de linjer, der allerede er skrevet, men udkommenteret), så brugeren kan indsætte penge på kontoen.
+
+4. Test din løsning ved at køre programmet og sikre, at både hævning og indsættelse fungerer korrekt.
+
+EKSTRA OPGAVER:
+5. Udvid metoden `hæveFraKonto` i klassen `BankAccount`:
+    - Sørg for, at det ikke er muligt at hæve et beløb, der overstiger kontosaldoen (`saldo`).
+    - Hvis brugeren forsøger at hæve et for stort beløb, skal der udskrives en besked som: 
+      "Ikke nok penge på kontoen til at hæve det ønskede beløb."

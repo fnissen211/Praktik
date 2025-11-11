@@ -2,26 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Initialize variables
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Enter your name:");
-        String name = scanner.nextLine();
-        System.out.println("Enter amount in account:");
-        int amount = scanner.nextInt();
+        System.out.println("Indsæt navn:");
+        String navn = scanner.nextLine();
+        System.out.println("Skriv saldo på konto:");
+        int saldo = scanner.nextInt();
 
-        BankAccount bankAcc = new BankAccount(name, amount);
-        System.out.println("Name:" + bankAcc.getName() + ", Amount: " + bankAcc.getAmount());
+        BankAccount bankAcc = new BankAccount(navn, saldo);
+        System.out.println("Navn:" + bankAcc.hentNavn() + ", Saldo: " + bankAcc.hentSaldo());
         
-        System.out.println("How much do you want to withdraw from your account?");
-        int withdrawAmount = scanner.nextInt();
-        bankAcc.withdrawFromAccount(withdrawAmount);
-        System.out.println("Your account now has: " + bankAcc.getAmount() + " DKK.");
+        System.out.println("Hvor meget vil du trække fra din konto?");
+        int hæveBeløb = scanner.nextInt();
+        bankAcc.hæveFraKonto(hæveBeløb);
+        System.out.println("Din konto har nu: " + bankAcc.hentSaldo() + " DKK.");
 
-        // System.out.println("How much do you want to withdraw from your account?");
-        // int depositAmount = scanner.nextInt();
-        // bankAcc.depositToAccount(depositAmount);
-        // System.out.println("Your account now has: " + bankAcc.getAmount() + " DKK.");
+        // System.out.println("Hvor meget vil du indsætte på din konto?");
+        // int beløb = scanner.nextInt();
+        // bankAcc.indsætPåKonto(beløb);
+        // System.out.println("Din konto har nu: " + bankAcc.hentSaldo() + " DKK.");
 
         scanner.close();
     }
