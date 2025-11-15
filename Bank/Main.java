@@ -22,6 +22,13 @@ public class Main {
         // bankAcc.indsætPåKonto(beløb);
         // System.out.println("Din konto har nu: " + bankAcc.hentSaldo() + " DKK.");
 
+
+
+
+
+
+        // INDSÆT HERUNDER LOGIKKEN FRA OVERFØRSELSE KLASSEN
+
         scanner.close();
     }
 }
