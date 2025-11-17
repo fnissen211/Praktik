@@ -5,4 +5,12 @@ public class Configuration {
     public int getMaxPlayers() {
         return 20;
     }
+
+    public int getMinPlayers() {
+        return 2;
+    }
+
+    public int setWaitTimeBetweenRounds() {
+        return 2000; // (Det er millisekunder her, så 2000 = 2 sekunder)
+    }
 }

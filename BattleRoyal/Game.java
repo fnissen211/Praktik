@@ -17,6 +17,9 @@ public class Game {
         if (count > config.getMaxPlayers()) {
             System.out.println("Max players is " + config.getMaxPlayers() + ". Setting to max.");
             count = config.getMaxPlayers();
+        } else if (count < config.getMinPlayers()) {
+            System.out.println("Min players is " + config.getMinPlayers() + ". Setting to min.");
+            count = config.getMinPlayers();
         }
         createPlayers(count);
 
@@ -45,7 +48,7 @@ public class Game {
 
     public void processGameTick() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(config.setWaitTimeBetweenRounds());
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -85,7 +88,11 @@ public class Game {
 
     private List<Player> getAlivePlayers() {
         List<Player> alive = new ArrayList<>();
-        for (Player p : players) if (p.isAlive()) alive.add(p);
+        for (Player p : players) {
+            if (p.isAlive()) {
+                alive.add(p);
+            }
+        }
         return alive;
     }
 }
