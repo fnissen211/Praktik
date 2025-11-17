@@ -23,6 +23,7 @@ public class Game {
         }
 
         System.out.println("\nWinner: " + getAlivePlayer().getName() + "!");
+        scanner.close();
     }
 
     private void createPlayers(int count) {
