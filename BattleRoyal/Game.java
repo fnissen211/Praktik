@@ -6,13 +6,18 @@ public class Game {
 
     private List<Player> players = new ArrayList<>();
     private Random random = new Random();
+    private Configuration config = new Configuration();
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter number of players: ");
         int count = scanner.nextInt();
-
+        
+        if (count > config.getMaxPlayers()) {
+            System.out.println("Max players is " + config.getMaxPlayers() + ". Setting to max.");
+            count = config.getMaxPlayers();
+        }
         createPlayers(count);
 
         System.out.println("\n--- Battle Royale Started! ---");
